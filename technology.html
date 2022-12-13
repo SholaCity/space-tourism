@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/tech.css">
+</head>
+
+<body class="disp-img tech">
+
+
+  <!-- navigation -->
+  <nav class="container desktop">
+    <img src="assets/shared/logo.svg" alt="" class="logo">
+    <div class="line"></div>
+    <ul class="nav-wrap">
+      <li><a href="index.html">00 Home</a></li>
+      <li><a href="destination.html">01 Destination</a></li>
+      <li><a href="#">02 Crew</a></li>
+      <li><a href="#">03 Technology</a></li>
+    </ul>
+  </nav>
+  <nav class="container mobile">
+    <img src="assets/shared/logo.svg" alt="" class="logo">
+    <div class="hamburger disp-img"></div>
+    <ul class="nav-mobile-item">
+      <li><a href="index.html">00 Home</a></li>
+      <li><a href="destination.html">01 Destination</a></li>
+      <li><a href="crew.html">02 Crew</a></li>
+      <li><a href="#">03 Technology</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <p class="page-title"><span>03</span> Space launch 101</p>
+  </div>
+  <main class="container">
+    <section id="tech" class="wrapper">
+      <div class="vehicle technology active-tech" id="vehicle">
+        <div class="-text">
+          <div class="tech-text">
+            <p class="name"> The terminology...</p>
+            <p class="title">LAUNCH VEHICLE</p>
+            <p class="descr"> A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+              payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+              it's quite an awe-inspiring sight on the launch pad!</p>
+          </div>
+          <div class="tabs">
+            <label for="vehicle-label">1</label>
+            <label for="capsule-label">2</label>
+            <label for="spaceport-label">3</label>
+          </div>
+        </div>
+        <div class="disp-img -image">
+        </div>
+      </div>
+      <div class="capsule technology" id="capsule">
+        <div class="-text">
+          <div class="tech-text">
+            <p class="name"> The terminology...</p>
+            <p class="title"> Space capsule</p>
+            <p class="descr"> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+              capsule to reenter the Earth's atmosphere without wings. Our capsule is where
+              you'll spend your time during the flight. It includes a space gym, cinema,
+              and plenty of other activities to keep you entertained.</p>
+          </div>
+          <div class="tabs">
+            <label for="vehicle-label">1</label>
+            <label for="capsule-label">2</label>
+            <label for="spaceport-label">3</label>
+          </div>
+        </div>
+        <div class="disp-img -image">
+        </div>
+      </div>
+      <div class="spaceport technology" id="spaceport">
+        <div class="-text">
+          <div class="tech-text">
+            <p class="name"> The terminology...</p>
+            <p class="title"> Spaceport</p>
+            <p class="descr"> A spaceport or cosmodrome is a site for launching (or receiving) spacecraft,
+              by analogy to the seaport for ships or airport for aircraft. Based in the
+              famous Cape Canaveral, our spaceport is ideally situated to take advantage
+              of the Earth’s rotation for launch.</p>
+          </div>
+          <div class="tabs">
+            <label for="vehicle-label">1</label>
+            <label for="capsule-label">2</label>
+            <label for="spaceport-label">3</label>
+          </div>
+        </div>
+        <div class="disp-img -image">
+        </div>
+      </div>
+    </section>
+    <input type="radio" name="techGroup" id="vehicle-label" data-tech="#vehicle">
+    <input type="radio" name="techGroup" id="capsule-label" data-tech="#capsule">
+    <input type="radio" name="techGroup" id="spaceport-label" data-tech="#spaceport">
+  </main>
+
+
+  <script src="index.js"></script>
+
+
+
+</body>
+
+</html>

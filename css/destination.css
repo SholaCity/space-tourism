@@ -1,0 +1,163 @@
+:root {
+    --grey: rgb(153, 153, 153);
+    --greyTrans: rgba(153, 153, 153, 0.1);
+    --White: hsl(0, 0%, 100%);
+    --WhiteTrans: hsla(0, 0%, 100%, 0.1);
+    --black: black;
+}
+
+
+body.destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+}
+
+#planets.wrapper {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+#planets.wrapper .planets {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#planets.wrapper .planets.active-planet {
+    visibility: visible;
+    opacity: 1;
+}
+
+#planets.wrapper .planets .planet-image {
+    flex-basis: 30%;
+    /* margin: 0 auto; */
+}
+
+#planets.wrapper .planets .-text {
+    width: min(50%, 400px);
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1.5rem;
+}
+
+.planets .-text .tabs {
+    width: min(90%, 400px);
+    display: flex;
+    justify-content: space-between;
+    row-gap: 0.8rem;
+}
+
+.-text .tabs label {
+    font-size: 1.2rem;
+    padding: 1rem 0.8rem;
+    border-bottom: 3px solid transparent;
+    color: var(--grey);
+}
+
+.planets.active-planet .-text .tabs label.active {
+    background-color: var(--greyTrans);
+    color: var(--White);
+    border-bottom: 3px solid var(--White);
+
+
+}
+
+.-text .head {
+    font-size: 7.2rem;
+}
+
+
+
+.planets .line {
+    height: 3px;
+    width: 90%;
+    background-color: var(--greyTrans);
+    border-radius: 2px;
+    /* margin-inline: auto; */
+}
+
+.-text .distance {
+    margin-top: 1.4rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.-text .distance>div {
+    display: flex;
+    flex-flow: column;
+    row-gap: 0.7rem;
+}
+
+.-text .distance .value {
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    #planets.wrapper .planets .planet-image {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    body.destination {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
+
+    #planets.wrapper .planets {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2.4rem;
+        padding: 2.4rem 0;
+    }
+
+
+    #planets.wrapper .planets .-text {
+        width: 80%;
+        padding: 2.4rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    #planets.wrapper .planets .planet-image {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #planets.wrapper .planets .-text {
+        width: min(90%, 550px);
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+
+    body.destination {
+        background-image: url("../assets/destination/background-destination-mobile.jpg");
+    }
+}
+
+@media (max-width: 500px) {
+    #planets.wrapper .planets .planet-image {
+        width: 70%;
+    }
+
+    .-text .distance {
+        flex-flow: column wrap;
+        justify-content: center;
+        gap: 1.7rem;
+    }
+
+}

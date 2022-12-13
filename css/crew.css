@@ -1,0 +1,157 @@
+:root {
+    --grey: rgb(153, 153, 153);
+    --greyTrans: rgba(153, 153, 153, 0.1);
+    --White: hsl(0, 0%, 100%);
+    --WhiteTrans: hsla(0, 0%, 100%, 0.1);
+}
+
+body.crew {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+}
+
+#crew {
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+}
+
+#crew .crew-members {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    column-gap: 1rem;
+}
+
+#crew .crew-members.active-crew {
+    opacity: 1;
+    visibility: visible;
+}
+
+#crew .-text {
+    width: min(70%, 550px);
+    display: flex;
+    flex-flow: column;
+    row-gap: 10vh;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#crew .-text .crew-text {
+    display: flex;
+    flex-flow: column;
+    row-gap: 2vh;
+}
+
+.crew-members .-text .title {
+    font-size: 2.4rem;
+    color: var(--grey);
+}
+
+.crew-members .-text .name {
+    font-size: 3.8rem;
+    inline-size: max-content;
+}
+
+#crew .tabs {
+    display: flex;
+    column-gap: 2.2rem;
+}
+
+#crew .tabs label {
+    width: 20px;
+    height: 20px;
+    background-color: var(--grey);
+    border-radius: 100%;
+}
+
+#crew .active-crew .tabs label.active {
+    background-color: var(--White);
+    box-shadow: 0px 0px 0px 4px var(--grey), 0px 0px 0px 6px white;
+}
+
+
+#crew .-image {
+    height: 520px;
+    object-fit: contain;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    #crew {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    body.crew {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+        overflow-y: scroll;
+    }
+
+    #crew .crew-members {
+        flex-flow: column nowrap;
+        row-gap: 5rem;
+        text-align: center;
+    }
+
+    #crew .crew-members .-text {
+        text-align: center;
+    }
+
+    .crew-members .-text .name {
+        margin: auto;
+    }
+
+    #crew .tabs {
+        justify-content: center;
+    }
+
+    #crew .-image {
+        width: min(80%, 420px);
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #crew .crew-members .-text {
+        width: min(90%, 500px);
+        height: 360px;
+
+    }
+
+    .crew-members .-text .name {
+        inline-size: fit-content;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body.crew {
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
+    }
+
+    .crew-members .-text .name {
+        font-size: 3.2rem;
+    }
+
+    .crew-members .-text .title {
+        font-size: 2.1rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .crew-members .-text .name {
+        font-size: 2.8rem;
+    }
+
+    .crew-members .-text .title {
+        font-size: 1.8rem;
+    }
+}

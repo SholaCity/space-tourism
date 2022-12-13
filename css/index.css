@@ -1,0 +1,121 @@
+:root {
+    --grey: rgb(153, 153, 153);
+    --greyTrans: rgba(153, 153, 153, 0.1);
+    --White: hsl(0, 0%, 100%);
+    --WhiteTrans: hsla(0, 0%, 100%, 0.1);
+}
+
+
+#hero {
+    margin-inline: auto;
+    min-height: 60vh;
+    margin-top: 10vh;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    row-gap: 3rem;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-text {
+    width: min(450px, 90%);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    row-gap: 1.6rem;
+}
+
+
+
+.hero-text p:nth-child(1) {
+    font-size: 1.8rem;
+}
+
+.hero-text p:nth-child(2) {
+    font-size: 8rem;
+}
+
+
+
+#hero .explore {
+    display: inline-block;
+    width: 20.4rem;
+    height: 20.4rem;
+    line-height: 20.4rem;
+    border-radius: 100%;
+    color: var(--black);
+    font-size: 1.8rem;
+    background-color: var(--White);
+    position: relative;
+    bottom: -15%;
+    text-align: center;
+    animation: glow 2s ease infinite forwards normal;
+}
+
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1100px) {
+    body.index {
+        background-image: url("../assets/home/background-home-tablet.jpg")
+    }
+
+    #hero {
+        padding: 0 1rem;
+        flex-flow: column nowrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero .explore {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hero-text p:nth-child(2) {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width:600px) {
+    body.index {
+        background-image: url("../assets/home/background-home-mobile.jpg")
+    }
+
+    .hero-text p:nth-child(2) {
+        font-size: 6.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #hero {
+        padding: 0;
+    }
+
+    .hero-text {
+        width: 90%;
+    }
+
+    .hero-text p:nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    #hero .explore {
+        width: 15.4rem;
+        height: 15.4rem;
+        line-height: 15.4rem;
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 10px 4px white;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px white;
+    }
+}

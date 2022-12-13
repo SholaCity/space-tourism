@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="css/destination.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="disp-img destination">
+    <!-- navigation -->
+    <nav class="container desktop">
+        <img src="assets/shared/logo.svg" alt="" class="logo">
+        <div class="line"></div>
+        <ul class="nav-wrap">
+            <li><a href="index.html">00 Home</a></li>
+            <li><a href="#">01 Destination</a></li>
+            <li><a href="crew.html">02 Crew</a></li>
+            <li><a href="technology.html">03 Technology</a></li>
+        </ul>
+    </nav>
+    <nav class="container mobile">
+        <img src="assets/shared/logo.svg" alt="" class="logo">
+        <div class="hamburger disp-img"></div>
+        <ul class="nav-mobile-item">
+            <li><a href="index.html">00 Home</a></li>
+            <li><a href="#">01 Destination</a></li>
+            <li><a href="crew.html">02 Crew</a></li>
+            <li><a href="technology.html">03 Technology</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p class="page-title"><span>01</span> Pick your destination</p>
+    </div>
+
+
+    <main class="container">
+        <section id="planets" class="wrapper">
+            <div class="moon planets active-planet" id="moon">
+                <img src="./assets/destination/image-moon.png" class="planet-image">
+                <div class="-text">
+                    <div class="tabs">
+                        <label for="moon-label" class="active">moon</label>
+                        <label for="mars-label">mars</label>
+                        <label for="europa-label">europa</label>
+                        <label for="titan-label">titan</label>
+                    </div>
+                    <p class="head">Moon</p>
+                    <p class="descr">See our planet as you've never seen it before. A perfect relaxing trip away to help
+                        regain perspective and come back refreshed. While you're there, take in some history
+                        by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                    <div class="line"></div>
+
+                    <div class="distance">
+                        <div>
+                            <p class="name"> Avg. distance
+                            </p>
+                            <p class="value"> 384,400 km
+                            </p>
+                        </div>
+                        <div>
+                            <p class="name"> Est. travel time
+                            </p>
+                            <p class="value"> 3 days
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mars planets" id="mars">
+                <img src="./assets/destination/image-mars.png" class="planet-image">
+                <div class="-text">
+                    <div class="tabs">
+                        <label for="moon-label">moon</label>
+                        <label for="mars-label" class="active">mars</label>
+                        <label for="europa-label">europa</label>
+                        <label for="titan-label">titan</label>
+                    </div>
+                    <p class="head">Mars</p>
+                    <p class="descr">Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons,
+                        the tallest planetary mountain in our solar system. It's two and a half times
+                        the size of Everest!</p>
+                    <div class="line"></div>
+                    <div class="distance">
+                        <div>
+                            <p class="name"> Avg. distance
+                            </p>
+                            <p class="value"> 225 mil. km
+                            </p>
+                        </div>
+                        <div>
+                            <p class="name"> Est. travel time
+                            </p>
+                            <p class="value"> 9 months
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="europa" class="europa planets">
+                <img src="./assets/destination/image-europa.png" class="planet-image">
+                <div class="-text">
+                    <div class="tabs">
+                        <label for="moon-label">moon</label>
+                        <label for="mars-label">mars</label>
+                        <label for="europa-label" class="active">europa</label>
+                        <label for="titan-label">titan</label>
+                    </div>
+                    <p class="head">Europa</p>
+                    <p class="descr">The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+                        winter lover's dream. With an icy surface, it's perfect for a bit of
+                        ice skating, curling, hockey, or simple relaxation in your snug
+                        wintery cabin.</p>
+                    <div class="line"></div>
+                    <div class="distance">
+                        <div>
+                            <p class="name"> Avg. distance
+                            </p>
+                            <p class="value"> 1.8 Bil. km
+                            </p>
+                        </div>
+                        <div>
+                            <p class="name"> Est. travel time
+                            </p>
+                            <p class="value"> 7 years
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="titan" class="titan planets" data-planet="titan">
+                <img src="./assets/destination/image-titan.png" class="planet-image">
+                <div class="-text">
+                    <div class="tabs">
+                        <label for="moon-label">moon</label>
+                        <label for="mars-label">mars</label>
+                        <label for="europa-label">europa</label>
+                        <label for="titan-label" class="active">titan</label>
+                    </div>
+                    <p class="head">Titan</p>
+                    <p class="descr">
+                        The only moon known to have a dense atmosphere other than Earth, Titan
+                        is a home away from home (just a few hundred degrees colder!). As a
+                        bonus, you get striking views of the Rings of Saturn.</p>
+                    <div class="line"></div>
+                    <div class="distance">
+                        <div>
+                            <p class="name"> Avg. distance
+                            </p>
+                            <p class="value"> 628 mil. km
+                            </p>
+                        </div>
+                        <div>
+                            <p class="name"> Est. travel time
+                            </p>
+                            <p class="value"> 3 years
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <input type="radio" name="planetGroup" id="moon-label" data-planet="#moon">
+        <input type="radio" name="planetGroup" id="mars-label" data-planet="#mars">
+        <input type="radio" name="planetGroup" id="europa-label" data-planet="#europa">
+        <input type="radio" name="planetGroup" id="titan-label" data-planet="#titan">
+    </main>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
